@@ -1,13 +1,9 @@
 package EasyRechner;
 
-
-
-/** TEST PUSH
- * Klasse Addierer - führt die Rechenstrategie Addieren für 2 Zahlen aus und
+/**Klasse Addierer - führt die Rechenstrategie Addieren für 2 Zahlen aus und
  * implementiert dafür das Interface Berechenbar.
  * 
- * TESTÄNDERUNG
- *
+ * 
  * @author Patricia Füruter
  */
 public class Addierer implements Berechenbar {
