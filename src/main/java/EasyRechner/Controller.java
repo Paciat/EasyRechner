@@ -3,7 +3,7 @@ package EasyRechner;
 
 
 /**
- * Der Controller steuertdie Vorgänge: Rechenart wählen, Zahlen einlesen,
+ * Der Controller steuert die Vorgänge: Rechenart wählen, Zahlen einlesen,
  * Berechnen, Ergebnis ausgeben
  *
  * @author Patricia Füruter

@@ -1,11 +1,8 @@
 package EasyRechner;
-
-
-
 import java.util.*;
 
 /**
- * Die KLasse Konsole stellt die Eingabeschnittstelle und die
+ * Die Klasse Konsole stellt die Eingabeschnittstelle und die
  * Ausgabeschnittstelle des Easyalculators dar. Dafür implementiert sie die
  * Interface Darstellbar und Einlesbar.
  *

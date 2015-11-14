@@ -5,8 +5,6 @@ package EasyRechner;
  */
 
 
-import EasyRechner.Dividierer;
-import EasyRechner.Subtrahierer;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;

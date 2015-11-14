@@ -6,7 +6,6 @@ package EasyRechner;
 
 
 
-import EasyRechner.Dividierer;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;
