@@ -36,20 +36,15 @@ public class Konsole implements Darstellbar, Einlesbar {
     }
 
     @Override
-    public void ausgebenErgebnis(double zahl1, double zahl2, char rechenzeichen, double ergebnis) {
+    public void ausgebenErgebnis(double zahl1, double zahl2, String rechenzeichen, double ergebnis) {
         System.out.println(zahl1 + " " + rechenzeichen + " " + zahl2 + " = " + ergebnis);
-        //speichern(zahl1, zahl2, rechenzeichen);
+        speichern(zahl1, zahl2, rechenzeichen);
     }
         
-/*   public void speichern(double zahl1, double zahl2, char rechenzeichen)
+public void speichern(double zahl1, double zahl2, String zeichen)
     {
         DataBaseCon db= new DataBaseCon();
-        try {
-            db.verbinden();
-            db.schreiben(zahl1,zahl2, rechenzeichen);
-        } catch (SQLException ex) {
-            System.out.println("keine DB");
-        }
-    }*/
+        db.schreiben(zahl1, zahl2, zeichen);
+    }
 }
 

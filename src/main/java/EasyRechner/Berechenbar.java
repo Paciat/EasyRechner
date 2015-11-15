@@ -77,5 +77,5 @@ public interface Berechenbar {
      *
      * @return rechenzeichen
      */
-    public char getRECHENZEICHEN();
+    public String getRECHENZEICHEN();
 }

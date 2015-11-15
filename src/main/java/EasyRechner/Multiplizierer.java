@@ -12,7 +12,7 @@ public class Multiplizierer implements Berechenbar {
 
     private double zahl1;
     private double zahl2;
-    private final char RECHENZEICHEN = '*'; // Rechenzeichen für Ausgabe
+    private String RECHENZEICHEN = "*"; // Rechenzeichen für Ausgabe
     private double ergebnis;
     private final String NAME = "Multiplizieren"; // Funktionsname für Ausgabe
 
@@ -62,7 +62,7 @@ public class Multiplizierer implements Berechenbar {
     }
 
     @Override
-    public char getRECHENZEICHEN() {
+    public String getRECHENZEICHEN() {
         return RECHENZEICHEN;
     }
 }

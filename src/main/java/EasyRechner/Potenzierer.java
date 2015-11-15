@@ -10,7 +10,7 @@ public class Potenzierer implements Berechenbar {
 
     private double zahl1;
     private double zahl2;
-    private final char RECHENZEICHEN = '^'; // Rechenzeichen für die Ausgabe
+    private final String RECHENZEICHEN = "^"; // Rechenzeichen für die Ausgabe
     private double ergebnis;
     private final String NAME = "Potenzieren";  // Name für die Ausgabe
 
@@ -60,7 +60,7 @@ public class Potenzierer implements Berechenbar {
     }
 
     @Override
-    public char getRECHENZEICHEN() {
+    public String getRECHENZEICHEN() {
         return RECHENZEICHEN;
     }
 }

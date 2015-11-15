@@ -12,7 +12,7 @@ public class Dividierer implements Berechenbar {
 
     private double zahl1;
     private double zahl2;
-    private final char RECHENZEICHEN = '/'; // Rechenzeichen für die Ausgabe
+    private final String RECHENZEICHEN = "/"; // Rechenzeichen für die Ausgabe
     private double ergebnis;
     private final String NAME = "Dividieren";  // Name für die Ausgabe
 
@@ -62,7 +62,7 @@ public class Dividierer implements Berechenbar {
     }
 
     @Override
-    public char getRECHENZEICHEN() {
+    public String getRECHENZEICHEN() {
         return RECHENZEICHEN;
     }
 }

@@ -29,6 +29,6 @@ public interface Darstellbar {
      * @param rechenzeichen
      * @param ergebnis
      */
-    public void ausgebenErgebnis(double zahl1, double zahl2, char rechenzeichen, double ergebnis);
+    public void ausgebenErgebnis(double zahl1, double zahl2, String rechenzeichen, double ergebnis);
 
 }

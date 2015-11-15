@@ -1,47 +1,46 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package EasyRechner;
-
-/**
-
- @author Patricia
+import java.sql.*;
 
 public class DataBaseCon {
     
-    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-    static final String DB_URL = "jdbc:mysql://localhost/datenbank";
-    static final String USER = "root";
-    static final String PASS = "";
+    Connection con;
+    Statement stmt;
+    ResultSet rst;
+    PreparedStatement prep;
+
+public void schreiben(double zahl1, double zahl2, String zeichen) {
     
-
-    public Connection verbinden() throws SQLException {
-
-        Connection con = d.connect(USER, null);
-
-        if (con == null) {
-            System.out.println("connection failed");
-        }
-        return con;
+    try
+    {
+      Class.forName("org.apache.derby.jdbc.ClientDriver");
+    }
+    catch ( ClassNotFoundException e )
+    {
+      System.err.println( "Keine Treiber-Klasse!" );
+      return;
     }
 
-    public void schreiben(double value1, double value2, char value3) throws SQLException {
+    try
+    {
+      con = DriverManager.getConnection("jdbc:derby://localhost:1527/RechernDb", "Pati", "test");
+      String sql = "INSERT INTO PATI.zahlen2 (zahl1, zahl2, zeichen) VALUES (?,?,?)";
+      prep = con.prepareStatement(sql);
+      prep.setDouble(1, zahl1);
+      prep.setDouble(2, zahl2);
+      prep.setString(3, zeichen);
+      prep.execute();
 
-        Connection con = verbinden();
-        Statement stmt = con.createStatement();
-
-        try {
-            
-            String sql = "INSERT INTO tbl_zahlen (z_erste, z_zweite, z_zeichen) VALUES(1,2,+)";
-            stmt.executeUpdate(sql);
-        } catch (SQLException e) {
-            System.out.println("Leider nein!");
-        }
     }
-
+    catch ( SQLException e )
+    {
+        System.err.println("Insert geht nicht!");
+    }
+    
+    finally
+    {
+    if ( con != null )
+    try { con.close(); } catch ( SQLException e ) {}
+    }
 }
-
-//        stmt.executeUpdate("INSERT INTO tbl_zahlen (z_erste,z_zweite, z_zeichen) VALUES ("+value1+","+value2+","+value3+");");
-*/
+}
