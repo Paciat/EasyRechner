@@ -37,14 +37,25 @@ public class Konsole implements Darstellbar, Einlesbar {
 
     @Override
     public void ausgebenErgebnis(double zahl1, double zahl2, String rechenzeichen, double ergebnis) {
-        System.out.println(zahl1 + " " + rechenzeichen + " " + zahl2 + " = " + ergebnis);
-        speichern(zahl1, zahl2, rechenzeichen);
+        System.out.println("Ergebnis: "+zahl1 + " " + rechenzeichen + " " + zahl2 + " = " + ergebnis);
+        //BerechnungenRechner r = new BerechnungenRechner();
+        //DataBaseCon db = new DataBaseCon();
+        //r.mittelwert(db.dieLetztenZehn());
     }
+    
+    public void gibAnzahlRechenarten(int gesamt, int add, int sub, int mul, int div, int pot){
         
-public void speichern(double zahl1, double zahl2, String zeichen)
-    {
-        DataBaseCon db= new DataBaseCon();
-        db.schreiben(zahl1, zahl2, zeichen);
+        System.out.println("Gesamtanzahl aller Berechnungen: "+gesamt);
+        System.out.println("Anzahl aller Additionen: "+add);
+        System.out.println("Anzahl aller Subtraktionen: "+sub);
+        System.out.println("Anzahl aller Multiplikationen: "+mul);
+        System.out.println("Anzahl aller Divisionen: "+div);
+        System.out.println("Anzahl aller Potenzrechnungen: "+pot);
+    }
+    
+    public void gibMittelVarianzStandardabweichung(double mit, double var, double sig){
+        System.out.println("Mittelwert der letzten 10 eingebenen Zahlen: "+mit);
+        System.out.println("Varianz der letzten 10 eingebenen Zahlen: "+var);
+        System.out.println("Standardabweichung der letzten 10 eingebenen Zahlen: "+sig);
     }
 }
-
