@@ -16,7 +16,8 @@ public class BerechnungenRechner {
     private double mittelwert;
     private double varianz;
     private double standardabweichung;
-    private double summe;
+    private double summeMittel = 0;
+    private double summeVarianz = 0;
     private final int ANZAHL = 10;
 
     public double mittelwert(ArrayList array)
@@ -25,11 +26,11 @@ public class BerechnungenRechner {
             for(int i =0; i<array.size(); i++)
             {
                 //System.out.println(array.get(i));
-                summe = summe + (double) array.get(i);
+                summeMittel = summeMittel + (double) array.get(i);
             }
         }
-        mittelwert = summe/ANZAHL;
-        return mittelwert=summe/ANZAHL;
+        mittelwert = summeMittel/ANZAHL;
+        return mittelwert=summeMittel/ANZAHL;
     }
 
     public double varianz(ArrayList array)
@@ -40,29 +41,30 @@ public class BerechnungenRechner {
                 double a = (double) array.get(i);
                 double b = mittelwert;
                 double c = Math.pow((a-b),2);
-                summe = summe + c;
-                System.out.println(summe);
+                summeVarianz = summeVarianz + c;
+                System.out.println(summeVarianz);
             }
             
-            if (summe < 0)
+            if (summeVarianz < 0)
             {
-                varianz=summe/ANZAHL*-1;
-                System.out.println(varianz);
+                varianz=summeVarianz/ANZAHL*-1;
+                //System.out.println(varianz);
             }
                     
             else
             {
-                varianz=summe/ANZAHL;
-                System.out.println(varianz);
+                varianz=summeVarianz/ANZAHL;
+                //System.out.println(varianz);
             }
         }
         return varianz;
     }
     
     
-    public double standardabweichung(double varianz)
+    public double standardabweichung()
     {
-       return standardabweichung = Math.sqrt(varianz);
+        standardabweichung = Math.sqrt(varianz);
+        return standardabweichung = Math.sqrt(varianz);
     }
 
 }

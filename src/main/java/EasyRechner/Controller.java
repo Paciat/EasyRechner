@@ -38,7 +38,7 @@ public class Controller {
         CONSOLE.ausgebenErgebnis(rechnen.getZahl1(), rechnen.getZahl2(), rechnen.getRECHENZEICHEN(), rechnen.getErgebnis());
         DB.schreiben(rechnen.getZahl1(), rechnen.getZahl2(), rechnen.getRECHENZEICHEN());
         CONSOLE.gibAnzahlRechenarten(DB.datensätzeZaehlen(), DB.zaehleAddition(), DB.zaehleSubtraktion(), DB.zaehleMultiplikation(), DB.zaehleDivisionen(), DB.zaehlePotenziern());
-        CONSOLE.gibMittelVarianzStandardabweichung(calc.mittelwert(DB.dieLetztenZehn()), calc.varianz(DB.dieLetztenZehn()), calc.standardabweichung(calc.varianz(DB.dieLetztenZehn())));
+        CONSOLE.gibMittelVarianzStandardabweichung(calc.mittelwert(DB.dieLetztenZehn()), calc.varianz(DB.dieLetztenZehn()), calc.standardabweichung());
         
     }
 
