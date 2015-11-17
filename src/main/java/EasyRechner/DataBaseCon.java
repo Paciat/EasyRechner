@@ -3,8 +3,12 @@ package EasyRechner;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**Klasse DataBaseCon -stellt die Verbindung zur Datenbank her und liefert die Methoden zum Eingeben und Auslesen der Datenbank.
+ * 
+ * @author Patricia Füruter
+ */
+
 public class DataBaseCon {
-    
     Connection con;
     Statement stmt;
     ResultSet rst;
@@ -12,6 +16,14 @@ public class DataBaseCon {
     int anzahl=0;
     ArrayList<Double> results;
 
+/**
+* Methode schreiben übernimmt die Parameter die in die Datenbank gespeichert werden
+* stellt die Datenbankverbingung her und speichert die Daten in die Datenbank.
+*
+* @param zahl1      die erste Zahl die eingegeben wurde
+* @param zahl2      die zweite Zahl die eingegeben wurde
+* @param zeichen    das Rechenzeichen, welches die Rechenart präsentiert
+*/
 public void schreiben(double zahl1, double zahl2, String zeichen) {
 
     try {
@@ -31,19 +43,28 @@ public void schreiben(double zahl1, double zahl2, String zeichen) {
         prep.execute();
     } 
     catch (SQLException e) {
-        System.err.println("Insert geht nicht!");
+        System.err.println("Daten konnten nicht in Datenbank gespeichert werden!");
     } 
     finally {
         if (con != null) {
             try {
                 con.close();
             } 
-            catch (SQLException e) {}
+            catch (SQLException e) {
+            
+                System.err.println("Verbindung wurde nicht geschlossen!");
+            }
         }
     }
 }
 
-public int datensätzeZaehlen() {
+/**
+* Methode datensaetzeZaehlen ermittelt die Anzahl aller Datensätze in der Datenbank
+* Diese entspricht der Anzahl der getätigten Berechnungen.
+*
+* @return anzahl    die ermittelte Anzahl aller Datensätze / getätigten Berechnungen
+*/
+public int datensaetzeZaehlen() {
 
     try {
         Class.forName("org.apache.derby.jdbc.ClientDriver");
@@ -62,19 +83,26 @@ public int datensätzeZaehlen() {
         }
     } 
     catch (SQLException e) {
-        System.err.println("Select Count() geht nicht!");
+        System.err.println("Anzahl aller Datensätze konnte nicht ermittelt werden.");
     } 
     finally {
         if (con != null) {
-        try {
-        con.close();
-        }
-        catch (SQLException e) { }
+            try {
+                con.close();
+            }
+            catch (SQLException e) { 
+                System.err.println("Verbindung wurde nicht geschlossen!");
+            }
         }
     }
     return anzahl;
 }
 
+/**
+* Methode zaehleAddition zählt alle in der Datenbank hinterlegten Additionen.
+*
+* @return anzahl    die ermittelte Anzahl aller Additionen
+*/
 public int zaehleAddition() {
 
     try {
@@ -93,17 +121,24 @@ public int zaehleAddition() {
         }
     } 
     catch (SQLException e) {
-        System.err.println("Select Count() geht nicht!");
+        System.err.println("Anzahl Rechenart konnte nicht ermittel werden!");
     } finally {
         if (con != null) {
             try {
             con.close();
-            } catch (SQLException e) {}
+            } catch (SQLException e) {
+                System.err.println("Verbindung wurde nicht geschlossen!");
+            }
         }
     }
     return anzahl;
 }
 
+/**
+* Methode zaehleSubtraktion zählt alle in der Datenbank hinterlegten Subtraktionen.
+*
+* @return anzahl    die ermittelte Anzahl aller Subtraktionen
+*/
 public int zaehleSubtraktion() {
 
     try {
@@ -122,17 +157,24 @@ public int zaehleSubtraktion() {
         }
     } 
     catch (SQLException e) {
-        System.err.println("Select Count() geht nicht!");
+        System.err.println("Anzahl Rechenart konnte nicht ermittel werden!");
     } finally {
         if (con != null) {
             try {
             con.close();
-            } catch (SQLException e) {}
+            } catch (SQLException e) {
+                System.err.println("Verbindung wurde nicht geschlossen!");
+            }
         }
     }
     return anzahl;
 }
 
+/**
+* Methode zaehleDivision zählt alle in der Datenbank hinterlegten Divisionen.
+*
+* @return anzahl    die ermittelte Anzahl aller Divisionen
+*/
 public int zaehleDivisionen() {
 
     try {
@@ -151,17 +193,24 @@ public int zaehleDivisionen() {
         }
     } 
     catch (SQLException e) {
-        System.err.println("Select Count() geht nicht!");
+        System.err.println("Anzahl Rechenart konnte nicht ermittel werden!");
     } finally {
         if (con != null) {
             try {
             con.close();
-            } catch (SQLException e) {}
+            } catch (SQLException e) {
+                System.err.println("Verbindung wurde nicht geschlossen!");
+            }
         }
     }
     return anzahl;
 }
 
+/**
+* Methode zaehleMultiplikationen zählt alle in der Datenbank hinterlegten Multiplikationen.
+*
+* @return anzahl    die ermittelte Anzahl aller Multiplikationen
+*/
 public int zaehleMultiplikation() {
 
     try {
@@ -180,17 +229,24 @@ public int zaehleMultiplikation() {
         }
     } 
     catch (SQLException e) {
-        System.err.println("Select Count() geht nicht!");
+        System.err.println("Anzahl Rechenart konnte nicht ermittel werden!");
     } finally {
         if (con != null) {
             try {
             con.close();
-            } catch (SQLException e) {}
+            } catch (SQLException e) {
+                System.err.println("Verbindung wurde nicht geschlossen!");
+            }
         }
     }
     return anzahl;
 }
 
+/**
+* Methode zaehlePotenzieren zählt alle in der Datenbank hinterlegten Potenzrechnungen.
+*
+* @return anzahl    die ermittelte Anzahl aller Potenzrechnungen
+*/
 public int zaehlePotenziern() {
 
     try {
@@ -209,17 +265,24 @@ public int zaehlePotenziern() {
         }
     } 
     catch (SQLException e) {
-        System.err.println("Select Count() geht nicht!");
+        System.err.println("Anzahl Rechenart konnte nicht ermittel werden!");
     } finally {
         if (con != null) {
             try {
             con.close();
-            } catch (SQLException e) {}
+            } catch (SQLException e) {
+                System.err.println("Verbindung wurde nicht geschlossen!");
+            }
         }
     }
     return anzahl;
 }
 
+/**
+* Methode dieLetztenZahn gibt die letzten 10 eingegebenen Zahlen zurück, nutzt dafür die letzten 5 Berechnungen.
+* 
+* @return results    eine ArrayListe welche die letzten 10 Zahlen enthält
+*/
 public ArrayList dieLetztenZehn(){
     try {
         Class.forName("org.apache.derby.jdbc.ClientDriver");
@@ -244,16 +307,17 @@ public ArrayList dieLetztenZehn(){
 
     }
     catch (SQLException e) {
-        System.err.println("Mittelwert berechnen geht nicht!");
+        System.err.println("Anzahl Rechenart konnte nicht ermittel werden!");
     } finally {
         if (con != null) {
             try {
             con.close();
-            } catch (SQLException e) {}
+            } catch (SQLException e) {
+                System.err.println("Verbindung wurde nicht geschlossen!");
+            }
         }
     }
     return results;
 } 
-
 
 }

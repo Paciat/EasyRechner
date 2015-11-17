@@ -1,32 +1,28 @@
 package EasyRechner;
 
-
-
 /**
- * Der Controller steuert die Vorgänge: Rechenart wählen, Zahlen einlesen,
- * Berechnen, Ergebnis ausgeben
+ * Der Controller alle Vorgänge
+ * Bspw: Rechenart wählen, Zahlen einlesen, Berechnen, Ergebnis ausgeben, usw
  *
  * @author Patricia Füruter
  */
 public class Controller {
 
-    private Berechenbar rechnen;
-    private final Konsole CONSOLE;
-    private final DataBaseCon DB;
-    private final BerechnungenRechner calc;
+private Berechenbar rechnen;
+private final Konsole CONSOLE;
+private final DataBaseCon DB;
+private final BerechnungenRechner calc;
 
     public Controller() {
         rechnen = new Addierer();
         CONSOLE = new Konsole();
         DB  = new DataBaseCon();
         calc = new BerechnungenRechner();
-        
     }
 
     /**
-     * Die Start-Methode wird von der Main-Methode in der Klasse EasyCalculator
-     * aufgerufen. Sie arbeite eine Rechenprozedur ab und interagiert dafür mit
-     * der Ein- und Ausgabe sowie mit der Berechnung.
+     * Die Start-Methode wird von der Main-Methode in der Klasse EasyCalculator aufgerufen 
+     * Sie arbeite eine Rechenprozedur ab und interagiert dafür mit der Ein- und Ausgabe sowie mit der Berechnung.
      */
     public void start() {
         auswaehlen(CONSOLE.waehleRechenart());
@@ -37,13 +33,12 @@ public class Controller {
         rechnen.setErgebnis(rechnen.berechnen());
         CONSOLE.ausgebenErgebnis(rechnen.getZahl1(), rechnen.getZahl2(), rechnen.getRECHENZEICHEN(), rechnen.getErgebnis());
         DB.schreiben(rechnen.getZahl1(), rechnen.getZahl2(), rechnen.getRECHENZEICHEN());
-        CONSOLE.gibAnzahlRechenarten(DB.datensätzeZaehlen(), DB.zaehleAddition(), DB.zaehleSubtraktion(), DB.zaehleMultiplikation(), DB.zaehleDivisionen(), DB.zaehlePotenziern());
+        CONSOLE.gibAnzahlRechenarten(DB.datensaetzeZaehlen(), DB.zaehleAddition(), DB.zaehleSubtraktion(), DB.zaehleMultiplikation(), DB.zaehleDivisionen(), DB.zaehlePotenziern());
         CONSOLE.gibMittelVarianzStandardabweichung(calc.mittelwert(DB.dieLetztenZehn()), calc.varianz(DB.dieLetztenZehn()), calc.standardabweichung());
-        
     }
 
     /**
-     * Die auswählen-Methode erhält einen Integer anhand dem Sie den
+     * Die auswählen-Methode erhält einen Integerwert anhand dem Sie den
      * entsprechenden Rechner (Strategy) erzeugt.
      *
      * @param auswahl - Integer der die Auswahl der Rechenmethode, oder den

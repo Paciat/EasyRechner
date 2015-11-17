@@ -1,7 +1,5 @@
 package EasyRechner;
 
-
-
 /**
  * Klasse Multiplizierer - führt die Rechenstrategie Multiplizieren für 2 Zahlen
  * aus und implementiert dafür das Interface Berechenbar.
@@ -21,7 +19,10 @@ public class Multiplizierer implements Berechenbar {
         if (zahl1 < Double.MAX_VALUE && zahl2 < Double.MAX_VALUE && zahl1 > Double.NEGATIVE_INFINITY && zahl2 > Double.NEGATIVE_INFINITY && zahl1 * zahl2 > Double.NEGATIVE_INFINITY && zahl1 * zahl2 < Double.MAX_VALUE) {
             this.ergebnis = zahl1 * zahl2;
             return zahl1 * zahl2;
-        } else {
+        }
+        else 
+        {
+            System.out.println("Berechnung liegt außerhalb des Wertebereichs, Ausgabe 0.0 nicht korrekt");
             return 0.0;
         }
     }

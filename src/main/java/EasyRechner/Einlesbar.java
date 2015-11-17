@@ -1,10 +1,8 @@
 package EasyRechner;
 
-
-
 /**
- * Interface Darstellbar - legt die Methoden fest, die eine Eingabeeinheit,
- * bspw. Konsole beherrschen muss.
+ * Interface Darstellbar - legt die Methoden fest, die eine Eingabeeinheit, 
+ * bspw eine Konsole beherrschen muss.
  *
  * @author Patricia Füruter
  */

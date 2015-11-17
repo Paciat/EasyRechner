@@ -3,8 +3,8 @@ import java.util.*;
 
 /**
  * Die Klasse Konsole stellt die Eingabeschnittstelle und die
- * Ausgabeschnittstelle des Easyalculators dar. Dafür implementiert sie die
- * Interface Darstellbar und Einlesbar.
+ * Ausgabeschnittstelle des Easyalculators dar 
+ * Dafür implementiert sie die Interface Darstellbar und Einlesbar.
  *
  * @author Patricia Füruter
  */
@@ -37,20 +37,20 @@ public class Konsole implements Darstellbar, Einlesbar {
 
     @Override
     public void ausgebenErgebnis(double zahl1, double zahl2, String rechenzeichen, double ergebnis) {
+        System.out.println("-------------------------------------------");
         System.out.println("Ergebnis: "+zahl1 + " " + rechenzeichen + " " + zahl2 + " = " + ergebnis);
-        //BerechnungenRechner r = new BerechnungenRechner();
-        //DataBaseCon db = new DataBaseCon();
-        //r.mittelwert(db.dieLetztenZehn());
     }
     
     public void gibAnzahlRechenarten(int gesamt, int add, int sub, int mul, int div, int pot){
         
+        System.out.println("-------------------------------------------");
         System.out.println("Gesamtanzahl aller Berechnungen: "+gesamt);
         System.out.println("Anzahl aller Additionen: "+add);
         System.out.println("Anzahl aller Subtraktionen: "+sub);
         System.out.println("Anzahl aller Multiplikationen: "+mul);
         System.out.println("Anzahl aller Divisionen: "+div);
         System.out.println("Anzahl aller Potenzrechnungen: "+pot);
+        System.out.println("-------------------------------------------");
     }
     
     public void gibMittelVarianzStandardabweichung(double mit, double var, double sig){

@@ -25,7 +25,6 @@ public class BerechnungenRechner {
         if(array.size()==10){
             for(int i =0; i<array.size(); i++)
             {
-                //System.out.println(array.get(i));
                 summeMittel = summeMittel + (double) array.get(i);
             }
         }
@@ -42,19 +41,16 @@ public class BerechnungenRechner {
                 double b = mittelwert;
                 double c = Math.pow((a-b),2);
                 summeVarianz = summeVarianz + c;
-                System.out.println(summeVarianz);
             }
             
             if (summeVarianz < 0)
             {
                 varianz=summeVarianz/ANZAHL*-1;
-                //System.out.println(varianz);
             }
                     
             else
             {
                 varianz=summeVarianz/ANZAHL;
-                //System.out.println(varianz);
             }
         }
         return varianz;
