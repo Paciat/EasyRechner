@@ -16,7 +16,7 @@ import org.junit.runners.Suite;
  * @author Patricia
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({EasyRechner.EasyRechnerSuite.class, com.ComSuite.class})
+
 public class RootSuite {
 
     @BeforeClass
