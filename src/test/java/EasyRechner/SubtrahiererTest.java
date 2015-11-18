@@ -5,8 +5,6 @@ package EasyRechner;
  */
 
 
-import EasyRechner.Dividierer;
-import EasyRechner.Subtrahierer;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -103,5 +101,4 @@ public class SubtrahiererTest {
         double result = instance.berechnen();
         Assert.assertEquals(0.0, result, 0.0);
     }
-
 }

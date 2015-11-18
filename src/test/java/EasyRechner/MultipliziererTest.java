@@ -5,7 +5,6 @@ package EasyRechner;
  */
 
 
-import EasyRechner.Multiplizierer;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;

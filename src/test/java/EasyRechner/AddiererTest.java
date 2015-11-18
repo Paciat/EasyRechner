@@ -6,7 +6,6 @@ package EasyRechner;
 
 
 
-import EasyRechner.Addierer;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -103,5 +102,17 @@ public class AddiererTest {
         double result = instance.berechnen();
         Assert.assertEquals(0.0, result, 0.0);
     }
+
+    /**
+     * Test of berechnen method, of class Addierer.
+     */
+    @Test
+    public void testBerechnen() {
+        System.out.println("berechnen");
+        Addierer instance = new Addierer();
+        double expResult = 0.0;
+        double result = instance.berechnen();
+    }
+
 
 }

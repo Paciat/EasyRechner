@@ -6,7 +6,6 @@ package EasyRechner;
 
 
 
-import EasyRechner.Dividierer;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -115,4 +114,5 @@ public class DividiererTest {
         double result = instance.berechnen();
         Assert.assertEquals(0.0, result, 0.0);
     }
+
 }

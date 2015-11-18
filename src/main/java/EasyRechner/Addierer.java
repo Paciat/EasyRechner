@@ -1,18 +1,15 @@
 package EasyRechner;
 
-
-
-/** TEST PUSH
- * Klasse Addierer - führt die Rechenstrategie Addieren für 2 Zahlen aus und
+/**Klasse Addierer - führt die Rechenstrategie Addieren für 2 Zahlen aus und
  * implementiert dafür das Interface Berechenbar.
- *
+ * 
  * @author Patricia Füruter
  */
 public class Addierer implements Berechenbar {
 
     private double zahl1;
     private double zahl2;
-    private final char RECHENZEICHEN = '+';  // Rechenzeichen für die Ausgabe
+    private final String RECHENZEICHEN = "+";  // Rechenzeichen für die Ausgabe
     private double ergebnis;
     private final String NAME = "Addieren"; // Name der Funktion für die Ausgabe
 
@@ -23,6 +20,7 @@ public class Addierer implements Berechenbar {
             this.ergebnis = zahl1 + zahl2;
             return zahl1 + zahl2;
         } else {
+            System.out.println("Berechnung liegt außerhalb des Wertebereichs, Ausgabe 0.0 nicht korrekt");
             return 0.0;
         }
     }
@@ -63,7 +61,7 @@ public class Addierer implements Berechenbar {
     }
 
     @Override
-    public char getRECHENZEICHEN() {
+    public String getRECHENZEICHEN() {
         return RECHENZEICHEN;
     }
 }

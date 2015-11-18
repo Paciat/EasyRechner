@@ -1,7 +1,5 @@
 package EasyRechner;
 
-
-
 /**
  * Klasse Dividierer - führt die Rechenstrategie Dividieren für 2 Zahlen aus und
  * implementiert dafür das Interface Berechenbar.
@@ -12,7 +10,7 @@ public class Dividierer implements Berechenbar {
 
     private double zahl1;
     private double zahl2;
-    private final char RECHENZEICHEN = '/'; // Rechenzeichen für die Ausgabe
+    private final String RECHENZEICHEN = "/"; // Rechenzeichen für die Ausgabe
     private double ergebnis;
     private final String NAME = "Dividieren";  // Name für die Ausgabe
 
@@ -22,7 +20,7 @@ public class Dividierer implements Berechenbar {
             this.ergebnis = zahl1 / zahl2;
             return zahl1 / zahl2;
         } else {
-            System.out.println("Division durch 0 ist mathematisch nicht möglich. Ergebnis nicht korrekt!");
+            System.out.println("Berechnung liegt außerhalb des Wertebereichs, Ausgabe 0.0 nicht korrekt");
             return 0.0;   
         }
     }
@@ -47,6 +45,7 @@ public class Dividierer implements Berechenbar {
         return zahl1;
     }
 
+    @Override
     public double getZahl2() {
         return zahl2;
     }
@@ -62,7 +61,7 @@ public class Dividierer implements Berechenbar {
     }
 
     @Override
-    public char getRECHENZEICHEN() {
+    public String getRECHENZEICHEN() {
         return RECHENZEICHEN;
     }
 }

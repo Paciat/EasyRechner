@@ -1,13 +1,10 @@
 package EasyRechner;
-
-
-
 import java.util.*;
 
 /**
- * Die KLasse Konsole stellt die Eingabeschnittstelle und die
- * Ausgabeschnittstelle des Easyalculators dar. Dafür implementiert sie die
- * Interface Darstellbar und Einlesbar.
+ * Die Klasse Konsole stellt die Eingabeschnittstelle und die
+ * Ausgabeschnittstelle des Easyalculators dar 
+ * Dafür implementiert sie die Interface Darstellbar und Einlesbar.
  *
  * @author Patricia Füruter
  */
@@ -39,20 +36,26 @@ public class Konsole implements Darstellbar, Einlesbar {
     }
 
     @Override
-    public void ausgebenErgebnis(double zahl1, double zahl2, char rechenzeichen, double ergebnis) {
-        System.out.println(zahl1 + " " + rechenzeichen + " " + zahl2 + " = " + ergebnis);
-        //speichern(zahl1, zahl2, rechenzeichen);
+    public void ausgebenErgebnis(double zahl1, double zahl2, String rechenzeichen, double ergebnis) {
+        System.out.println("-------------------------------------------");
+        System.out.println("Ergebnis: "+zahl1 + " " + rechenzeichen + " " + zahl2 + " = " + ergebnis);
     }
+    
+    public void gibAnzahlRechenarten(int gesamt, int add, int sub, int mul, int div, int pot){
         
-/*   public void speichern(double zahl1, double zahl2, char rechenzeichen)
-    {
-        DataBaseCon db= new DataBaseCon();
-        try {
-            db.verbinden();
-            db.schreiben(zahl1,zahl2, rechenzeichen);
-        } catch (SQLException ex) {
-            System.out.println("keine DB");
-        }
-    }*/
+        System.out.println("-------------------------------------------");
+        System.out.println("Gesamtanzahl aller Berechnungen: "+gesamt);
+        System.out.println("Anzahl aller Additionen: "+add);
+        System.out.println("Anzahl aller Subtraktionen: "+sub);
+        System.out.println("Anzahl aller Multiplikationen: "+mul);
+        System.out.println("Anzahl aller Divisionen: "+div);
+        System.out.println("Anzahl aller Potenzrechnungen: "+pot);
+        System.out.println("-------------------------------------------");
+    }
+    
+    public void gibMittelVarianzStandardabweichung(double mit, double var, double sig){
+        System.out.println("Mittelwert der letzten 10 eingebenen Zahlen: "+mit);
+        System.out.println("Varianz der letzten 10 eingebenen Zahlen: "+var);
+        System.out.println("Standardabweichung der letzten 10 eingebenen Zahlen: "+sig);
+    }
 }
-

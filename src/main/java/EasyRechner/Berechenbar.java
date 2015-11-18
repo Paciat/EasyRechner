@@ -5,7 +5,6 @@ package EasyRechner;
  * Interface Berechenbar - legt die Methoden fest, die eine Rechenstrategie
  * beherrschen muss.
  *
- *
  * @author Patricia
  * @version 01-11-2015
  */
@@ -73,9 +72,9 @@ public interface Berechenbar {
     public double getErgebnis();
 
     /**
-     * Methode gibt das gespeicherte Rechenzeichen der Funktion bspw. + zurück
+     * Methode gibt das gespeicherte Rechenzeichen der Funktion bspw + zurück
      *
      * @return rechenzeichen
      */
-    public char getRECHENZEICHEN();
+    public String getRECHENZEICHEN();
 }

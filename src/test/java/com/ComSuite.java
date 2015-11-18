@@ -5,7 +5,10 @@
  */
 package com;
 
-import com.mycompany.MycompanySuite;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -13,23 +16,23 @@ import org.junit.runners.Suite;
  *
  * @author Patricia
  */
-@org.junit.runner.RunWith(org.junit.runners.Suite.class)
-@org.junit.runners.Suite.SuiteClasses({MycompanySuite.class})
+@RunWith(Suite.class)
+@Suite.SuiteClasses({com.mycompany.MycompanySuite.class})
 public class ComSuite {
 
-    @org.junit.BeforeClass
+    @BeforeClass
     public static void setUpClass() throws Exception {
     }
 
-    @org.junit.AfterClass
+    @AfterClass
     public static void tearDownClass() throws Exception {
     }
 
-    @org.junit.Before
+    @Before
     public void setUp() throws Exception {
     }
 
-    @org.junit.After
+    @After
     public void tearDown() throws Exception {
     }
     

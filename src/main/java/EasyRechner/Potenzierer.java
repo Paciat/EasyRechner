@@ -10,7 +10,7 @@ public class Potenzierer implements Berechenbar {
 
     private double zahl1;
     private double zahl2;
-    private final char RECHENZEICHEN = '^'; // Rechenzeichen für die Ausgabe
+    private final String RECHENZEICHEN = "^"; // Rechenzeichen für die Ausgabe
     private double ergebnis;
     private final String NAME = "Potenzieren";  // Name für die Ausgabe
 
@@ -20,7 +20,7 @@ public class Potenzierer implements Berechenbar {
             this.ergebnis = Math.pow(zahl1,zahl2);
             return Math.pow(zahl1,zahl2);
         } else {
-            System.out.println("Division durch 0 ist mathematisch nicht möglich. Ergebnis nicht korrekt!");
+            System.out.println("Berechnung liegt außerhalb des Wertebereichs, Ausgabe 0.0 nicht korrekt");
             return 0.0;   
         }
     }
@@ -60,7 +60,7 @@ public class Potenzierer implements Berechenbar {
     }
 
     @Override
-    public char getRECHENZEICHEN() {
+    public String getRECHENZEICHEN() {
         return RECHENZEICHEN;
     }
 }

@@ -1,7 +1,5 @@
 package EasyRechner;
 
-
-
 /**
  * Klasse Subtrahierer - führt die Rechenstrategie Subrathieren für 2 Zahlen aus
  * und implementiert dafür das Interface Berechenbar.
@@ -12,7 +10,7 @@ public class Subtrahierer implements Berechenbar {
 
     private double zahl1;
     private double zahl2;
-    private final char RECHENZEICHEN = '-'; // Rechenzeichen für Ausgabe
+    private final String RECHENZEICHEN = "-"; // Rechenzeichen für Ausgabe
     private double ergebnis;
     private final String NAME = "Subtrahieren"; // Funktionsname für Ausgabe
 
@@ -23,6 +21,7 @@ public class Subtrahierer implements Berechenbar {
             this.ergebnis = zahl1 - zahl2;
             return zahl1 - zahl2;
         } else {
+            System.out.println("Berechnung liegt außerhalb des Wertebereichs, Ausgabe 0.0 nicht korrekt");
             return 0.0;
         }
     }
@@ -64,7 +63,7 @@ public class Subtrahierer implements Berechenbar {
     }
 
     @Override
-    public char getRECHENZEICHEN() {
+    public String getRECHENZEICHEN() {
         return RECHENZEICHEN;
     }
 }
