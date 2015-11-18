@@ -103,4 +103,16 @@ public class AddiererTest {
         Assert.assertEquals(0.0, result, 0.0);
     }
 
+    /**
+     * Test of berechnen method, of class Addierer.
+     */
+    @Test
+    public void testBerechnen() {
+        System.out.println("berechnen");
+        Addierer instance = new Addierer();
+        double expResult = 0.0;
+        double result = instance.berechnen();
+    }
+
+
 }

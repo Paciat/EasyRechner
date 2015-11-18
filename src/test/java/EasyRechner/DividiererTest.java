@@ -114,4 +114,127 @@ public class DividiererTest {
         double result = instance.berechnen();
         Assert.assertEquals(0.0, result, 0.0);
     }
+
+    /**
+     * Test of berechnen method, of class Dividierer.
+     */
+    @Test
+    public void testBerechnen() {
+        System.out.println("berechnen");
+        Dividierer instance = new Dividierer();
+        double expResult = 0.0;
+        double result = instance.berechnen();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setZahl1 method, of class Dividierer.
+     */
+    @Test
+    public void testSetZahl1() {
+        System.out.println("setZahl1");
+        double[] zahl1 = null;
+        Dividierer instance = new Dividierer();
+        instance.setZahl1(zahl1);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setZahl2 method, of class Dividierer.
+     */
+    @Test
+    public void testSetZahl2() {
+        System.out.println("setZahl2");
+        double[] zahl2 = null;
+        Dividierer instance = new Dividierer();
+        instance.setZahl2(zahl2);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setErgebnis method, of class Dividierer.
+     */
+    @Test
+    public void testSetErgebnis() {
+        System.out.println("setErgebnis");
+        double ergebnis = 0.0;
+        Dividierer instance = new Dividierer();
+        instance.setErgebnis(ergebnis);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getZahl1 method, of class Dividierer.
+     */
+    @Test
+    public void testGetZahl1() {
+        System.out.println("getZahl1");
+        Dividierer instance = new Dividierer();
+        double expResult = 0.0;
+        double result = instance.getZahl1();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getZahl2 method, of class Dividierer.
+     */
+    @Test
+    public void testGetZahl2() {
+        System.out.println("getZahl2");
+        Dividierer instance = new Dividierer();
+        double expResult = 0.0;
+        double result = instance.getZahl2();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getNAME method, of class Dividierer.
+     */
+    @Test
+    public void testGetNAME() {
+        System.out.println("getNAME");
+        Dividierer instance = new Dividierer();
+        String expResult = "";
+        String result = instance.getNAME();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getErgebnis method, of class Dividierer.
+     */
+    @Test
+    public void testGetErgebnis() {
+        System.out.println("getErgebnis");
+        Dividierer instance = new Dividierer();
+        double expResult = 0.0;
+        double result = instance.getErgebnis();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getRECHENZEICHEN method, of class Dividierer.
+     */
+    @Test
+    public void testGetRECHENZEICHEN() {
+        System.out.println("getRECHENZEICHEN");
+        Dividierer instance = new Dividierer();
+        String expResult = "";
+        String result = instance.getRECHENZEICHEN();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
 }

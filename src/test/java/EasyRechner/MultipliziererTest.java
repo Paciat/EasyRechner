@@ -88,4 +88,127 @@ public class MultipliziererTest {
         double result = instance.berechnen();
         Assert.assertEquals(10.0, result, 0.0);
     }
+
+    /**
+     * Test of berechnen method, of class Multiplizierer.
+     */
+    @Test
+    public void testBerechnen() {
+        System.out.println("berechnen");
+        Multiplizierer instance = new Multiplizierer();
+        double expResult = 0.0;
+        double result = instance.berechnen();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setZahl1 method, of class Multiplizierer.
+     */
+    @Test
+    public void testSetZahl1() {
+        System.out.println("setZahl1");
+        double[] zahl1 = null;
+        Multiplizierer instance = new Multiplizierer();
+        instance.setZahl1(zahl1);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setZahl2 method, of class Multiplizierer.
+     */
+    @Test
+    public void testSetZahl2() {
+        System.out.println("setZahl2");
+        double[] zahl2 = null;
+        Multiplizierer instance = new Multiplizierer();
+        instance.setZahl2(zahl2);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setErgebnis method, of class Multiplizierer.
+     */
+    @Test
+    public void testSetErgebnis() {
+        System.out.println("setErgebnis");
+        double ergebnis = 0.0;
+        Multiplizierer instance = new Multiplizierer();
+        instance.setErgebnis(ergebnis);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getZahl1 method, of class Multiplizierer.
+     */
+    @Test
+    public void testGetZahl1() {
+        System.out.println("getZahl1");
+        Multiplizierer instance = new Multiplizierer();
+        double expResult = 0.0;
+        double result = instance.getZahl1();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getZahl2 method, of class Multiplizierer.
+     */
+    @Test
+    public void testGetZahl2() {
+        System.out.println("getZahl2");
+        Multiplizierer instance = new Multiplizierer();
+        double expResult = 0.0;
+        double result = instance.getZahl2();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getNAME method, of class Multiplizierer.
+     */
+    @Test
+    public void testGetNAME() {
+        System.out.println("getNAME");
+        Multiplizierer instance = new Multiplizierer();
+        String expResult = "";
+        String result = instance.getNAME();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getErgebnis method, of class Multiplizierer.
+     */
+    @Test
+    public void testGetErgebnis() {
+        System.out.println("getErgebnis");
+        Multiplizierer instance = new Multiplizierer();
+        double expResult = 0.0;
+        double result = instance.getErgebnis();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getRECHENZEICHEN method, of class Multiplizierer.
+     */
+    @Test
+    public void testGetRECHENZEICHEN() {
+        System.out.println("getRECHENZEICHEN");
+        Multiplizierer instance = new Multiplizierer();
+        String expResult = "";
+        String result = instance.getRECHENZEICHEN();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
 }
